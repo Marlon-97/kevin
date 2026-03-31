@@ -97,7 +97,7 @@ body::before {
 }
 
 .hero-illustration-curry {
-  width: min(188px, 28vw);
+  width: min(250px, 34vw);
   transform: rotate(6deg);
 }
 
@@ -432,7 +432,7 @@ button:disabled {
   }
 
   .hero-illustration-curry {
-    width: min(92px, 26vw);
+    width: min(118px, 30vw);
   }
 
   .hero-mini-mugs {
