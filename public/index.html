@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Curry Bier Voting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="card">
+        <p class="eyebrow">Curry Beer Rating</p>
+        <div class="hero-row">
+          <div>
+            <h1 id="poll-title">Abstimmung wird geladen...</h1>
+            <p id="poll-description" class="description"></p>
+          </div>
+          <div class="hero-illustration-stack" aria-hidden="true">
+            <div class="hero-illustration-pair">
+              <img class="hero-illustration hero-illustration-main" src="/assets/beer-mug.svg" alt="" />
+              <img class="hero-illustration hero-illustration-curry" src="/assets/curry-bowl.svg" alt="" />
+            </div>
+            <div class="hero-mini-mugs">
+              <img class="hero-mini-mug" src="/assets/beer-mug.svg" alt="" />
+              <img class="hero-mini-mug" src="/assets/beer-mug.svg" alt="" />
+              <img class="hero-mini-mug" src="/assets/beer-mug.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <section class="rating-panel" aria-labelledby="rating-heading">
+          <div class="rating-panel-header">
+            <div>
+              <h2 id="rating-heading">Bierwertung</h2>
+              <p class="rating-copy">Wie gut war das Curry? Wähle einfach 1 bis 5 Bier.</p>
+            </div>
+            <div id="selected-rating" class="selected-rating">Noch keine Auswahl</div>
+          </div>
+          <div id="vote-form" class="beer-picker" role="radiogroup" aria-label="Bierbewertung"></div>
+          <label class="comment-field" for="chef-comment">
+            <span class="comment-label">Optionaler Kommentar für den Chefkoch</span>
+            <textarea id="chef-comment" name="chef-comment" rows="3" maxlength="280" placeholder="Zum Beispiel: super gewürzt, richtig gute Schärfe oder nächstes Mal etwas cremiger."></textarea>
+          </label>
+        </section>
+        <div class="footer-row">
+          <button id="submit-button" type="button">Bierwertung absenden</button>
+          <p id="status-message" class="status-message"></p>
+        </div>
+      </section>
+
+      <section class="card results-card">
+        <div class="results-header">
+          <div>
+            <h2>Durchschnitt</h2>
+            <p class="results-copy">Angezeigt wird nur die durchschnittliche Bierwertung für das Curry.</p>
+          </div>
+        </div>
+        <div class="results-summary">
+          <div class="summary-card">
+            <span class="summary-label">Durchschnitt</span>
+            <strong id="average-rating">0.0 Bier</strong>
+          </div>
+        </div>
+        <section class="comments-panel" aria-labelledby="comments-heading">
+          <h3 id="comments-heading" class="comments-heading">Kommentare für den Chefkoch</h3>
+          <div id="comments-list" class="comments-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>
