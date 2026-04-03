@@ -57,10 +57,11 @@ body::before {
   animation: fadeUp 500ms ease both;
 }
 
-.top-link-row {
+.bottom-link-row {
   display: flex;
-  justify-content: flex-start;
-  margin-bottom: 12px;
+  justify-content: center;
+  grid-column: 1 / -1;
+  margin-top: 4px;
 }
 
 .hero-row {
@@ -483,8 +484,8 @@ button:disabled {
     font-size: 0.68rem;
   }
 
-  .top-link-row {
-    margin-bottom: 10px;
+  .bottom-link-row {
+    margin-top: 2px;
   }
 
   h1 {
